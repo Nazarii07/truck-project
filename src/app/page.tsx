@@ -1,10 +1,13 @@
+'use client'
 import carImage from "../images/first-container-car.png"
 import carImageSecond from "../images/first-container-car-second.png"
 import ContactForm from "@/components/form";
 import bigLogo from '../images/bigLogo.svg'
+import { SnackbarProvider } from 'notistack';
 
 export default function Home() {
   return (
+     <SnackbarProvider maxSnack={3}>
     <div className="w-full flex flex-col items-center min-h-screen pb-[100px]">
       <div
       style={{ backgroundImage: `url(${carImage.src})` }}
@@ -44,6 +47,7 @@ export default function Home() {
           <p className="text-titleSize md:text-titleSize-md lg:text-titleSize-lg font-krona font-bold break-words text-black mb-5 text-center">Mart Transit LLC</p>
         </div>
       </div>
-    </div>
+      </div>
+      </SnackbarProvider>
   );
 }

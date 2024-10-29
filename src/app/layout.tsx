@@ -25,13 +25,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />;
       </Head>
       <body className={inter.className}>
+       
         <main className="flex flex-col items-center w-full bg-contentBg">
-          {/* <WavyBackground className="flex flex-1 flex-col items-center justify-between w-full"> */}
             <Header />
             {children}
             <Footer />
-          {/* </WavyBackground> */}
-        </main>
+          </main>
       </body>
     </html>
   );
