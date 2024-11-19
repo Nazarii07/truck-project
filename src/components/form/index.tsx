@@ -1,30 +1,31 @@
-'use client'
-import React, { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from '@/app/firebaseConfig';
-import { useSnackbar } from 'notistack';
+"use client";
+import React, { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/app/firebaseConfig";
+import { useSnackbar } from "notistack";
+import Link from "next/link";
 
 const ContactForm: React.FC = () => {
   const { enqueueSnackbar } = useSnackbar();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    from: '',
-    to: '',
-    pickupDate: '',
-    name: '',
-    phone: '',
-    email: '',
+    from: "",
+    to: "",
+    pickupDate: "",
+    name: "",
+    phone: "",
+    email: "",
     agreePrivacy: false,
     receiveSMS: false,
   });
 
-  console.log('formData', formData);
+  console.log("formData", formData);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -32,23 +33,29 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await addDoc(collection(db, 'contacts'), formData);
-      enqueueSnackbar('Form submitted successfully!', { variant: 'success',anchorOrigin: { vertical: 'top', horizontal: 'right' }, });
-      
+      await addDoc(collection(db, "contacts"), formData);
+      enqueueSnackbar("Form submitted successfully!", {
+        variant: "success",
+        anchorOrigin: { vertical: "top", horizontal: "right" },
+      });
+
       setFormData({
-        from: '',
-        to: '',
-        pickupDate: '',
-        name: '',
-        phone: '',
-        email: '',
+        from: "",
+        to: "",
+        pickupDate: "",
+        name: "",
+        phone: "",
+        email: "",
         agreePrivacy: false,
         receiveSMS: false,
       });
       setIsLoading(false);
     } catch (error) {
-      console.error('Error adding document: ', error);
-      enqueueSnackbar('Failed to submit the form. Please try again.', { variant: 'error', anchorOrigin: { vertical: 'top', horizontal: 'right' }, });
+      console.error("Error adding document: ", error);
+      enqueueSnackbar("Failed to submit the form. Please try again.", {
+        variant: "error",
+        anchorOrigin: { vertical: "top", horizontal: "right" },
+      });
       setIsLoading(false);
     }
   };
@@ -56,7 +63,9 @@ const ContactForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="bg-formBg p-6 max-w-md ">
       <div className="mb-4">
-        <label className="block text-black text-sm font-medium mb-1">From</label>
+        <label className="block text-black text-sm font-medium mb-1">
+          From
+        </label>
         <input
           type="text"
           name="from"
@@ -76,7 +85,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-black text-sm font-medium mb-1">Pickup Date</label>
+        <label className="block text-black text-sm font-medium mb-1">
+          Pickup Date
+        </label>
         <input
           type="date"
           name="pickupDate"
@@ -86,7 +97,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-black text-sm font-medium mb-1">Name</label>
+        <label className="block text-black text-sm font-medium mb-1">
+          Name
+        </label>
         <input
           type="text"
           name="name"
@@ -96,7 +109,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-black text-sm font-medium mb-1">Phone</label>
+        <label className="block text-black text-sm font-medium mb-1">
+          Phone
+        </label>
         <input
           type="text"
           name="phone"
@@ -106,7 +121,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-black text-sm font-medium mb-1">Email</label>
+        <label className="block text-black text-sm font-medium mb-1">
+          Email
+        </label>
         <input
           type="email"
           name="email"
@@ -124,7 +141,14 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="mr-2"
           />
-          By clicking the Submit button, you agree to the Privacy Policy.*
+          <div>
+            By clicking the Submit button, you agree to the{" "}
+            <Link href={"/privacy-policy"}>
+              <span className="underline cursor-pointer text-linkColor">
+                Privacy Policy.*
+              </span>
+            </Link>
+          </div>
         </label>
       </div>
       <div className="mb-6">
@@ -136,7 +160,15 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="mr-2"
           />
-          Would you like to receive information SMS about our services?
+          <div>
+            By checking this box you agree to receive text messages from Mart
+            Transit LLC, you can reply STOP to opt-out at any time, this is my{" "}
+            <Link href={"/privacy-policy"}>
+              <span className="underline cursor-pointer text-linkColor">
+                Privacy Policy
+              </span>
+            </Link>
+          </div>
         </label>
       </div>
       {formData.agreePrivacy && !isLoading ? (

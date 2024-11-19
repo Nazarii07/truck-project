@@ -9,9 +9,9 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "dePortal | Interconnecting the Ecosystems",
+  title: "Mart Transit LLC",
   description:
-    "dePortal is a next-gen blockchain explorer for real-time network and node monitoring, offering detailed analytics",
+    "Mart Transit LLC transport transfer",
 };
 
 export default function RootLayout({
