@@ -23,9 +23,9 @@ const config: Config = {
         footerBg: "#003049",
         // formBg: '#DFDFD0',
         formBg: "#E4E7EB",
+        linkColor: "#007AFF",
         disabledButton: "#B6B0B0",
         disabledButtonText: "#6F727B",
-        linkColor: "#007AFF",
       },
       fontSize: {
         subtitleSize: "2rem",
