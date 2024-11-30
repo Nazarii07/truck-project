@@ -7,17 +7,32 @@ const Footer = () => {
         (c) Product by Mart Transit LLC
       </p>
       <div className="flex items-center justify-between">
-        <p className="mt-3 mb-3 mr-6 text-customGray font-montserrat text-footerSize md:text-footerSize-md">
-          Phone: 216 858 5758
-        </p>
-        <p className="mt-3 mb-3 mr-6 text-customGray font-montserrat text-footerSize md:text-footerSize-md">
-          @mail: mart.transit.dispatch@gmail.com
-        </p>
-        <Link href={"/privacy-policy"}>
-          <p className="mt-3 mb-3 text-customGray font-montserrat text-footerSize md:text-footerSize-md cursor-pointer">
-            Privacy Policy
+        <div className="flex flex-col mr-10">
+          <p className="mt-3 mb-3  text-customGray font-montserrat text-footerSize md:text-footerSize-md">
+            • Phone: 216 858 5758
           </p>
-        </Link>
+          <p className="mt-3 mb-3 text-customGray font-montserrat text-footerSize md:text-footerSize-md">
+            • @mail: mart.transit.dispatch@gmail.com
+          </p>
+        </div>
+
+        <div className="flex flex-col">
+          <Link href={"/privacy-policy"}>
+            <p className="mt-3 mb-3  text-customGray font-montserrat text-footerSize md:text-footerSize-md cursor-pointer">
+              • Privacy Policy
+            </p>
+          </Link>
+          <Link href={"/terms-conditions"}>
+            <p className="mt-3 mb-3 text-customGray font-montserrat text-footerSize md:text-footerSize-md cursor-pointer">
+              • Terms and Conditions
+            </p>
+          </Link>
+          <Link href={"/terms-service"}>
+            <p className="mt-3 mb-3 text-customGray font-montserrat text-footerSize md:text-footerSize-md cursor-pointer">
+              • Terms of Service
+            </p>
+          </Link>
+        </div>
       </div>
     </footer>
   );
