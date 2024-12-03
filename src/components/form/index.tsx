@@ -164,7 +164,7 @@ const ContactForm: React.FC = () => {
             By checking this box, you agree to receive text messages from Mart
             Transit LLC. You may reply STOP to opt-out at any time. Reply HELP
             for assistance. Messages and data rates may apply. Message frequency
-            will vary.Learn more on our{" "}
+            will vary. Learn more on our{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
                 Privacy Policy page.
