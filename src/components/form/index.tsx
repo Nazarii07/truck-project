@@ -133,13 +133,13 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="flex text-black items-center">
+        <label className="flex text-black items-start">
           <input
             type="checkbox"
             name="agreePrivacy"
             checked={formData.agreePrivacy}
             onChange={handleChange}
-            className="mr-2"
+            className="mr-2 mt-1"
           />
           <div>
             By clicking the Submit button, you agree to the{" "}
@@ -152,20 +152,22 @@ const ContactForm: React.FC = () => {
         </label>
       </div>
       <div className="mb-6">
-        <label className="flex text-black items-center">
+        <label className="flex text-black items-start">
           <input
             type="checkbox"
             name="receiveSMS"
             checked={formData.receiveSMS}
             onChange={handleChange}
-            className="mr-2"
+            className="mr-2 mt-1"
           />
           <div>
-            By checking this box you agree to receive text messages from Mart
-            Transit LLC, you can reply STOP to opt-out at any time, this is my{" "}
+            By checking this box, you agree to receive text messages from Mart
+            Transit LLC. You may reply STOP to opt-out at any time. Reply HELP
+            for assistance. Messages and data rates may apply. Message frequency
+            will vary.Learn more on our{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
-                Privacy Policy
+                Privacy Policy page.
               </span>
             </Link>
           </div>
