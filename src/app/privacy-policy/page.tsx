@@ -4,7 +4,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white text-gray-800 pb-[200px]">
       <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
-      <p className="mb-4 font-light text-sm">Last Updated: Oct 23, 2024</p>
+      <p className="mb-4 font-light text-sm">Last Updated: Jan 24, 2025</p>
       <p className="mb-4">
         This Privacy Policy (“Privacy Policy”) explains how Mart Transit LLC
         (“Mart Transit”, “we”, “us”, “our”) may collect, use, and share
@@ -147,8 +147,8 @@ const PrivacyPolicy: React.FC = () => {
         full Privacy Policy for details.
       </p>
       <p className="mb-4">
-        SMS opt-in consent or phone numbers for SMS purposes will NOT be shared
-        with third parties and affiliates for marketing purposes.
+        SMS opt-in or phone numbers for the purpose of SMS are not being shared
+        with any third party and affiliate company for marketing purposes.
       </p>
       <h2 className="text-2xl font-semibold mb-2">4. CHILDREN</h2>
       <p className="mb-4">
