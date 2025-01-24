@@ -161,11 +161,12 @@ const ContactForm: React.FC = () => {
             className="mr-2 mt-1"
           />
           <div>
-            By checking this box, I consent to receive text messages from (Mart
-            Transit LLC) related to conversational purposes, order
-            confirmations. You may reply STOP to opt-out at any time. Reply HELP
-            for assistance. Messages and data rates may apply. Message frequency
-            will vary. Learn more on our {" "}
+            By checking this box, I consent to receive text messages from Mart
+            Transit LLC related to conversational purposes, appointment
+            reminders, follow-up on cases, order confirmations, etc. You may
+            reply STOP to opt-out at any time. Reply HELP for assistance.
+            Messages and data rates may apply. Message frequency will vary.
+            Learn more on our{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
                 Privacy Policy page.
