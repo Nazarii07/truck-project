@@ -40,14 +40,16 @@ const TermsAndConditions: React.FC = () => {
       <ul className="list-disc list-inside mb-4">
         <li>
           Customers and Guests: Updates regarding your orders, deliveries, or
-          other relevant information. Applicants: Information about your
-          application status, onboarding materials, or other employment-related
-          updates.
+          other relevant information.
         </li>
         <li>
+          Applicants: Information about your application status, onboarding
+          materials, or other employment-related updates.
+        </li>
+        <p className="mb-4">
           For Example: Hello Thank you for contacting Mart Transit LLC, how can
           we help you? Reply Stop to opt-out at any time. Message and data rates
-          may apply, for assistance, text Help" or visit our{" "}
+          may apply, for assistance, text "HELP" or visit our{" "}
           <Link href={"/privacy-policy"}>
             <span className="underline cursor-pointer text-linkColor">
               Privacy Policy
@@ -59,7 +61,7 @@ const TermsAndConditions: React.FC = () => {
               Terms of Service
             </span>
           </Link>
-        </li>
+        </p>
       </ul>
 
       <h2 className="text-2xl font-semibold mb-2">4. Message Frequency</h2>
@@ -80,9 +82,14 @@ const TermsAndConditions: React.FC = () => {
       <h2 className="text-2xl font-semibold mb-2">6. Opt-In Method</h2>
       <p className="mb-4">
         Customer will Opt-In for SMS messaging from Mart Transit LLC through
-        (intake forms, Verbally, filling out a paper form)
-        (https://www.mart-transit.pp.ua/ - Contact US URL), this agreement for
-        SMS will not be shared with third parties for marketing purposes.
+        (intake forms, Verbally, filling out a paper form) ({" "}
+        <Link href={"https://www.mart-transit.pp.ua/"}>
+          <span className="underline cursor-pointer text-linkColor">
+            https://www.mart-transit.pp.ua/
+          </span>
+        </Link>{" "}
+        - Contact US URL ), this agreement for SMS will not be shared with third
+        parties for marketing purposes.
       </p>
 
       <h2 className="text-2xl font-semibold mb-2">7. Opt-out</h2>
