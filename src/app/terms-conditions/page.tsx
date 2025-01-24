@@ -133,8 +133,6 @@ const TermsAndConditions: React.FC = () => {
         revision date. By continuing to engage with our services, you agree to
         be bound by any changes to these terms.
       </p>
-
-      <p className="mb-6">(c) Product by Mart Transit LLC</p>
     </div>
   );
 };
