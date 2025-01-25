@@ -82,7 +82,7 @@ const TermsAndConditions: React.FC = () => {
       <h2 className="text-2xl font-semibold mb-2">6. Opt-In Method</h2>
       <p className="mb-4">
         Customer will Opt-In for SMS messaging from Mart Transit LLC through
-        (intake forms, Verbally, filling out a paper form) ({" "}
+        (intake forms, Verbally) ({" "}
         <Link href={"https://www.mart-transit.pp.ua/"}>
           <span className="underline cursor-pointer text-linkColor">
             https://www.mart-transit.pp.ua/
