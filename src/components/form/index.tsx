@@ -145,7 +145,7 @@ const ContactForm: React.FC = () => {
             By clicking the Submit button, you agree to the{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
-                Privacy Policy.
+                Privacy Policy
               </span>
             </Link>{" "}
             and our{" "}
