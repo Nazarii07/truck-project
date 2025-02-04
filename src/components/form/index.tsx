@@ -145,9 +145,16 @@ const ContactForm: React.FC = () => {
             By clicking the Submit button, you agree to the{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
-                Privacy Policy.*
+                Privacy Policy.
               </span>
-            </Link>
+            </Link>{" "}
+            and our{" "}
+            <Link href={"/terms-conditions"}>
+              <span className="underline cursor-pointer text-linkColor">
+                Terms and Conditions.
+              </span>
+            </Link>{" "}
+            *
           </div>
         </label>
       </div>
@@ -169,7 +176,13 @@ const ContactForm: React.FC = () => {
             Learn more on our{" "}
             <Link href={"/privacy-policy"}>
               <span className="underline cursor-pointer text-linkColor">
-                Privacy Policy page.
+                Privacy Policy
+              </span>
+            </Link>{" "}
+            and our{" "}
+            <Link href={"/terms-conditions"}>
+              <span className="underline cursor-pointer text-linkColor">
+                Terms and Conditions.
               </span>
             </Link>
           </div>
